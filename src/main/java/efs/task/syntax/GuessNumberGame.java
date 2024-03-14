@@ -21,7 +21,10 @@ public class GuessNumberGame {
     public GuessNumberGame(String argument) {
         int number = Integer.parseInt(argument);
         if(number < 1 || number > UsefulConstants.MAX_UPPER_BOUND)
+        {
+            System.out.println(UsefulConstants.WRONG_ARGUMENT);
             throw new IllegalArgumentException(UsefulConstants.WRONG_ARGUMENT);
+        }
         this.maxNumber = number;
         Random random = new Random();
         this.correctAnswer = Math.abs(random.nextInt()) % this.maxNumber;
