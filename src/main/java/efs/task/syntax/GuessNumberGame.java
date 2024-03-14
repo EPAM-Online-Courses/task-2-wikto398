@@ -40,6 +40,7 @@ public class GuessNumberGame {
         int maxAttempts = (int)(Math.log(this.maxNumber) / Math.log(2)) + 1;
         Scanner scanner = new Scanner(System.in);
         int guessedNumber;
+        System.out.println("Zagrajmy. Zgadnij liczbę z zakresu <1," + maxNumber + ">");
         while(attempts <= maxAttempts)
         {
             progressBar(attempts, maxAttempts);
