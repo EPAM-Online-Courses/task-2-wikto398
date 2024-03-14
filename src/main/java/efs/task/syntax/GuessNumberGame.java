@@ -32,7 +32,7 @@ public class GuessNumberGame {
         }
         this.maxNumber = number;
         Random random = new Random();
-        this.correctAnswer = Math.abs(random.nextInt()) % this.maxNumber;
+        this.correctAnswer = Math.abs(random.nextInt()) % this.maxNumber + 1;
     }
 
     public void play() {
@@ -53,9 +53,9 @@ public class GuessNumberGame {
                     break;
                 }
                 else if(guessedNumber > this.correctAnswer)
-                    System.out.println(UsefulConstants.TO_MUCH);
+                    System.out.println("TO" + UsefulConstants.TO_MUCH);
                 else
-                    System.out.println(UsefulConstants.TO_LESS);
+                    System.out.println("TO" + UsefulConstants.TO_LESS);
                 attempts++;
             }
             catch (Exception e)
