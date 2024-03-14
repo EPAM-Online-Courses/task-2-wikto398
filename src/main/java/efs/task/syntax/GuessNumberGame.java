@@ -28,7 +28,7 @@ public class GuessNumberGame {
         catch (Exception e)
         {
             System.out.println(UsefulConstants.WRONG_ARGUMENT);
-            exit(-1);
+            throw new IllegalArgumentException();
         }
         this.maxNumber = number;
         Random random = new Random();
