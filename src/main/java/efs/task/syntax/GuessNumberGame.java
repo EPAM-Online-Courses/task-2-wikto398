@@ -53,22 +53,22 @@ public class GuessNumberGame {
                     break;
                 }
                 else if(guessedNumber > this.correctAnswer)
-                    System.out.println("TO " + UsefulConstants.TO_MUCH + " a");
+                    System.out.println("TO " + UsefulConstants.TO_MUCH);
                 else
-                    System.out.println("TO " + UsefulConstants.TO_LESS + " a");
+                    System.out.println("TO " + UsefulConstants.TO_LESS);
                 attempts++;
             }
             catch (Exception e)
             {
-                System.out.println("Hmm, '" + guess + "' to " + UsefulConstants.NOT_A_NUMBER + " a");
+                System.out.println("Hmm, '" + guess + "' to " + UsefulConstants.NOT_A_NUMBER);
                 attempts++;
             }
         }
         scanner.close();
         if(attempts <= maxAttempts)
-            System.out.println(UsefulConstants.CONGRATULATIONS + ", " + attempts + " - tyle prób zajęło Ci odgadnięcie liczby " + this.correctAnswer + " a");
+            System.out.println(UsefulConstants.CONGRATULATIONS + ", " + attempts + " - tyle prób zajęło Ci odgadnięcie liczby " + this.correctAnswer);
         else
-            System.out.println(UsefulConstants.UNFORTUNATELY + ", wyczerpałeś limit prób (" + maxAttempts + ") do odgadnięcia liczby " + this.correctAnswer + " a");
+            System.out.println(UsefulConstants.UNFORTUNATELY + ", wyczerpałeś limit prób (" + maxAttempts + ") do odgadnięcia liczby " + this.correctAnswer);
     }
 
     public void progressBar(int attempts, int maxAttempts){
