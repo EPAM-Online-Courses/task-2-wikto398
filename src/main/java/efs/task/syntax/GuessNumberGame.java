@@ -53,9 +53,9 @@ public class GuessNumberGame {
                     break;
                 }
                 else if(guessedNumber > this.correctAnswer)
-                    System.out.println("TO" + UsefulConstants.TO_MUCH);
+                    System.out.println("TO " + UsefulConstants.TO_MUCH);
                 else
-                    System.out.println("TO" + UsefulConstants.TO_LESS);
+                    System.out.println("TO " + UsefulConstants.TO_LESS);
                 attempts++;
             }
             catch (Exception e)
