@@ -19,11 +19,16 @@ public class GuessNumberGame {
     }
 
     public GuessNumberGame(String argument) {
-        int number = Integer.parseInt(argument);
-        if(number < 1 || number > UsefulConstants.MAX_UPPER_BOUND)
+        int number = 0;
+        try{
+            number = Integer.parseInt(argument);
+            if(number < 1 || number > UsefulConstants.MAX_UPPER_BOUND)
+                throw new IllegalArgumentException();
+        }
+        catch (Exception e)
         {
             System.out.println(UsefulConstants.WRONG_ARGUMENT);
-            throw new IllegalArgumentException(UsefulConstants.WRONG_ARGUMENT);
+            exit(-1);
         }
         this.maxNumber = number;
         Random random = new Random();
